@@ -1,0 +1,308 @@
+/* src/styles.css */
+
+/* Basic resets */
+* { 
+  box-sizing: border-box; 
+}
+
+html, body, #root { 
+  height: 100%; 
+  margin: 0; 
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+}
+
+/* Page root: clean white screen */
+.page-root {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* ---------------------------
+   EXPORT BUTTON
+   --------------------------- */
+.center-area {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-btn {
+  margin-left:30px;
+  width: 130px;
+  height: 32px;
+  min-width: 130px;
+  position: absolute;
+  top: 384px;
+  left: 655px;
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(#3c3c3c, #1f1f1f);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.export-btn:hover {
+  background: linear-gradient(#4a4a4a, #2a2a2a);
+  border-color: #98a2b3;
+}
+
+/* ---------------------------
+   POPUP STYLES - Dark Theme
+   --------------------------- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ---------------------------
+   POPUP CONTAINER (Inner Box)
+   --------------------------- */
+.popup-container {
+  width: 500px;
+  background: linear-gradient(#2a2a2a, #1b1b1b);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  border: 1px solid #3a3a3a;
+  padding-bottom: 20px;
+}
+
+
+.popup-header {
+  padding: 24px 24px 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.popup-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.popup-close:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.popup-subtitle {
+  padding: 0 24px 24px 24px;
+  color: #aaa;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+.inside-box {
+  margin: 10px 10px 10px 10px;
+  padding: 24px 24px 24px 24px;
+  background-color: #030303;
+  border-radius:10px;
+}
+/* Single Rectangular Toggle Button */
+.toggle-container {
+  display: flex;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 0 24px 24px 24px;
+  border: 1px solid #444;
+}
+
+.toggle-option {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.toggle-option:hover {
+  color: #fff;
+  background: #333;
+}
+
+.toggle-option.active {
+  background: #030303;
+  color: #fff;
+}
+
+/* Inline option header (no separate box) */
+.option-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.option-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-title-with-icon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.option-main-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Zipped Button Styles */
+.zipped-button {
+  background: #555;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 70px;
+  text-align: center;
+}
+
+.zipped-button:hover {
+  background: #474748;
+  border-color: #474748;
+}
+
+.zipped-button.active {
+  background: #474748;
+  border-color: #474748;
+  color: #fff;
+}
+
+/* Simple Checkbox Styles */
+.option-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.option-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  background: transparent;
+  position: relative;
+}
+
+.option-checkbox input:checked + .checkmark {
+  background: #805fb5;
+  border-color: #805fb5;
+}
+
+.option-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 24px 0;
+}
+
+.download-btn {
+  background: linear-gradient(#3c3c3c, #1f1f1f);
+  color: #ffffff;
+  border: 1px solid #444;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  text-transform: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+  background: #0a0a0a;
+}
+
+/* Download Success Message */
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
